@@ -4,6 +4,7 @@ import "./Marquee.css";
 
 export function Hero() {
   return (
+    /*teste*/
     <section className="hero" id="apresentacao">
       <div className="container">
         <div className="hero-grid">
