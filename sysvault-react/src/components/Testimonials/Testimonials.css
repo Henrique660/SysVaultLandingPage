@@ -1,0 +1,86 @@
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.quote-card {
+  border-top: 1px solid var(--border);
+  padding-top: 1.8rem;
+  position: relative;
+}
+
+.quote-card .tape {
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%) rotate(1deg);
+}
+
+.quote-card::before {
+  content: "\201c";
+  font-family: var(--font-display);
+  font-size: 4rem;
+  line-height: 0.6;
+  color: var(--muted);
+  position: absolute;
+  top: 0.4rem;
+  right: 0;
+}
+
+.quote-card blockquote {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.45;
+  letter-spacing: -0.005em;
+  color: var(--fg);
+  margin-bottom: 1.4rem;
+  font-style: italic;
+}
+
+.quote-card .quote-src {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted-ink);
+}
+
+.quote-card .quote-src b {
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.quote-card .quote-src a {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.18s ease;
+}
+
+.quote-card .quote-src a:hover {
+  border-color: var(--accent-ink);
+}
+
+.testimonials-note {
+  margin-top: 2.2rem;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  color: var(--muted-ink);
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.testimonials-note::before {
+  content: "";
+  width: 26px;
+  height: 1px;
+  background: var(--border);
+}
+
+@media (max-width: 980px) {
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
+  }
+}

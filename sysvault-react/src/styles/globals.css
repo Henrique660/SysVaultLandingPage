@@ -1,0 +1,96 @@
+:root {
+  --bg: oklch(98% 0.004 95);
+  --surface: oklch(100% 0.002 95);
+  --fg: oklch(20% 0.018 70);
+  --muted: oklch(48% 0.012 70);
+  --border: oklch(90% 0.006 95);
+  --accent: oklch(52% 0.1 28);
+  --font-display: "Iowan Old Style", "Charter", Georgia, serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "Cascadia Code", Consolas, "Liberation Mono", monospace;
+  --accent-ink: oklch(35% 0.11 28);
+  --accent-fill: oklch(46% 0.11 28);
+  --accent-fill-deep: oklch(38% 0.12 28);
+  --muted-ink: oklch(42% 0.012 70);
+  --paper-shade: oklch(94% 0.006 95);
+  --container: 1200px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  letter-spacing: 0;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+[id] {
+  scroll-margin-top: 96px;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--bg);
+}
+
+a {
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.08;
+  letter-spacing: -0.015em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.25rem, 5.8vw, 4.7rem);
+  line-height: 1.04;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  margin-top: 1.1rem;
+}
+
+h3 {
+  font-size: 1.55rem;
+  letter-spacing: -0.01em;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+  border-radius: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
