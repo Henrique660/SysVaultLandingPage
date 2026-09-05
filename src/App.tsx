@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react";
 import { Grain } from "./components/Grain/Grain";
 import { Header } from "./components/Header/Header";
 import { Hero } from "./components/Hero/Hero";
@@ -26,6 +27,7 @@ export default function App() {
         <Testimonials />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
