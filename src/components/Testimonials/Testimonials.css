@@ -60,24 +60,6 @@
   border-color: var(--accent-ink);
 }
 
-.testimonials-note {
-  margin-top: 2.2rem;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: var(--muted-ink);
-  display: flex;
-  align-items: center;
-  gap: 0.8rem;
-}
-
-.testimonials-note::before {
-  content: "";
-  width: 26px;
-  height: 1px;
-  background: var(--border);
-}
-
 @media (max-width: 980px) {
   .testimonials-grid {
     grid-template-columns: 1fr;

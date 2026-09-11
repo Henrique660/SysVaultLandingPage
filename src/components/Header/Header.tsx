@@ -44,7 +44,7 @@ export function Header() {
           SysVault<em>SW</em>
         </a>
         <span className="head-meta">Desenvolvimento sob encomenda</span>
-        <nav className="nav" ref={navRef} aria-label="Navegação principal">
+        <nav className="nav" id="nav" ref={navRef} aria-label="Navegação principal">
           {NAV_ITEMS.map(({ href, label }) => (
             <a
               key={href}

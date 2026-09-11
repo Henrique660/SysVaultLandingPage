@@ -20,19 +20,9 @@ const TESTIMONIALS: Testimonial[] = [
     quote:
       "\u201cO site já está trazendo resultados 🥰 \u2014 Fiquei muito satisfeita com o resultado! O site ficou profissional, bonito e, principalmente, já está trazendo resultados para o meu negócio. Dá para perceber o cuidado em cada detalhe. Super recomendo o trabalho!\u201c",
     author: "Evelyn Rodrigues",
-    company: "",
     hasTape: true,
     delay: ".08s",
   },
-  /*
-  {
-    quote:
-      "\u201cTexto do depoimento do cliente \u2014 substituir pela cita\u00e7\u00e3o real do projeto atendido.\u201d",
-    author: "[Nome do cliente]",
-    company: "[Empresa]",
-    delay: ".16s",
-  },
-  */
 ];
 
 export function Testimonials() {

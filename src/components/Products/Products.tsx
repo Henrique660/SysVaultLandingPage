@@ -69,7 +69,7 @@ export function Products() {
           <span className="sec-no">02</span>
           <div>
             <p className="eyebrow">Produtos</p>
-            <h2>Três frentes, um só time.</h2>
+            <h2>Quatro frentes, um só time.</h2>
           </div>
         </div>
 
