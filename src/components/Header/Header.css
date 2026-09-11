@@ -1,0 +1,133 @@
+header.site-head {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 80;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.25s ease, border-color 0.25s ease;
+}
+
+header.site-head.is-scrolled {
+  background: oklch(98% 0.004 95 / 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom-color: oklch(85% 0.006 95);
+}
+
+.head-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 68px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.35rem;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand em {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  color: var(--accent-ink);
+  margin-left: 0.15rem;
+  text-transform: uppercase;
+  vertical-align: 2px;
+}
+
+.head-meta {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 10px;
+  color: var(--muted-ink);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2.25rem);
+}
+
+.nav a {
+  font-family: var(--font-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 11px;
+  color: var(--fg);
+  text-decoration: none;
+  padding: 1.4rem 0 1.1rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+
+.nav a:hover {
+  color: var(--accent-ink);
+}
+
+.nav a.is-active {
+  border-bottom-color: var(--fg);
+}
+
+.nav-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.nav-toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 860px) {
+  .nav {
+    position: fixed;
+    inset: 68px 0 auto 0;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    padding: 0.5rem clamp(20px, 5vw, 48px) 1.2rem;
+    display: none;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    padding: 0;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav a.is-active {
+    border-bottom-color: var(--fg);
+  }
+
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .head-meta {
+    display: none;
+  }
+}

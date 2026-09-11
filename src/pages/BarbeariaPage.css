@@ -1,0 +1,131 @@
+.barbearia-page {
+  --barb-bg: oklch(17% 0.018 70);
+  --barb-surface: oklch(23% 0.025 70);
+  --barb-surface-2: oklch(29% 0.028 70);
+  --barb-fg: oklch(94% 0.018 80);
+  --barb-muted: oklch(72% 0.025 75);
+  --barb-border: oklch(100% 0 0 / 0.14);
+  --barb-accent: oklch(78% 0.16 70);
+  --barb-accent-deep: oklch(62% 0.13 65);
+  --barb-ink: oklch(20% 0.02 70);
+  --barb-font-display: "Bebas Neue", Impact, sans-serif;
+  --barb-font-body: "DM Sans", "Segoe UI", sans-serif;
+  min-height: 100vh;
+  background: var(--barb-bg);
+  color: var(--barb-fg);
+  font-family: var(--barb-font-body);
+  line-height: 1.55;
+}
+
+.barbearia-page *, .barbearia-page *::before, .barbearia-page *::after { box-sizing: border-box; }
+.barbearia-page a { color: inherit; text-decoration: none; }
+.barbearia-page button, .barbearia-page input, .barbearia-page select { font: inherit; }
+.barbearia-page h1, .barbearia-page h2, .barbearia-page h3, .barbearia-page p { margin-top: 0; }
+.barbearia-page h1, .barbearia-page h2 { font-family: var(--barb-font-display); font-weight: 400; line-height: .94; letter-spacing: -.01em; }
+.barbearia-shell { max-width: 1240px; margin: 0 auto; padding-inline: 32px; }
+.barbearia-topbar { display: flex; align-items: center; justify-content: space-between; padding-block: 26px; border-bottom: 1px solid var(--barb-border); }
+.barbearia-brand { display: flex; align-items: center; gap: 12px; font-weight: 700; letter-spacing: .02em; }
+.barbearia-brand-mark { width: 34px; height: 34px; border: 1px solid var(--barb-accent); color: var(--barb-accent); display: grid; place-items: center; font-family: var(--barb-font-display); font-size: 22px; }
+.barbearia-nav { display: flex; gap: 28px; color: var(--barb-muted); font-size: 14px; }
+.barbearia-nav a:hover { color: var(--barb-fg); }
+.barbearia-nav-cta { color: var(--barb-accent); font-weight: 600; }
+.barbearia-eyebrow { color: var(--barb-accent); text-transform: uppercase; letter-spacing: .1em; font-size: 12px; font-weight: 700; margin-bottom: 22px; }
+.barbearia-hero { min-height: 720px; display: grid; grid-template-columns: 1.02fr .98fr; gap: 72px; align-items: center; padding-block: 82px 100px; }
+.barbearia-hero h1 { font-size: clamp(66px, 9vw, 126px); max-width: 620px; margin-bottom: 28px; }
+.barbearia-hero h1 span { color: var(--barb-accent); }
+.barbearia-hero-copy { max-width: 540px; color: var(--barb-muted); font-size: 18px; }
+.barbearia-actions { display: flex; align-items: center; gap: 24px; margin-top: 36px; }
+.barbearia-btn { min-height: 48px; padding: 0 22px; border: 1px solid transparent; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; gap: 10px; font-weight: 700; transition: transform .2s ease, background .2s ease, color .2s ease; }
+.barbearia-btn-primary { background: var(--barb-accent); color: var(--barb-ink); }
+.barbearia-btn-primary:hover { background: oklch(70% .15 70); transform: translateY(-2px); }
+.barbearia-btn-quiet { color: var(--barb-fg); border-color: var(--barb-border); background: transparent; }
+.barbearia-btn-quiet:hover { background: var(--barb-surface-2); }
+.barbearia-hero-note { color: var(--barb-muted); font-size: 12px; margin-top: 18px; }
+.barbearia-product-stage { position: relative; min-height: 510px; }
+.barbearia-stage-label { position: absolute; top: 18px; right: 0; z-index: 2; color: var(--barb-muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+.barbearia-shot { position: absolute; padding: 8px; background: #2b2722; box-shadow: 0 24px 70px oklch(0% 0 0 / .24); }
+.barbearia-shot img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top; }
+.barbearia-shot span { position: absolute; left: 14px; bottom: 14px; z-index: 1; padding: 8px 10px; background: oklch(17% .018 70 / .9); color: var(--barb-fg); font-size: 10px; letter-spacing: .06em; text-transform: uppercase; }
+.barbearia-shot-main { right: 24px; top: 20px; width: 270px; height: 500px; transform: rotate(4deg); }
+.barbearia-shot-secondary { left: 0; top: 118px; width: 300px; height: 370px; transform: rotate(-4deg); }
+.barbearia-section { padding-block: 110px; border-top: 1px solid var(--barb-border); }
+.barbearia-section-head { display: flex; justify-content: space-between; gap: 40px; align-items: end; margin-bottom: 52px; }
+.barbearia-section h2 { font-size: clamp(48px, 7vw, 82px); margin-bottom: 0; max-width: 650px; }
+.barbearia-section-intro { max-width: 340px; color: var(--barb-muted); margin-bottom: 4px; }
+.barbearia-pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--barb-border); }
+.barbearia-pillars article { background: var(--barb-bg); padding: 30px 28px 34px; min-height: 220px; }
+.barbearia-pillars span { color: var(--barb-accent); font-family: var(--barb-font-display); font-size: 38px; }
+.barbearia-pillars h3 { font-family: var(--barb-font-body); font-size: 18px; margin: 28px 0 10px; }
+.barbearia-pillars p, .barbearia-flow-list p, .barbearia-install-copy > p:last-of-type { color: var(--barb-muted); font-size: 14px; max-width: 31ch; }
+.barbearia-screens-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+.barbearia-screens-grid figure { margin: 0; min-width: 0; }
+.barbearia-screens-grid figure > div { background: #171717; padding: 8px; }
+.barbearia-screens-grid img { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; object-position: top; }
+.barbearia-screens-grid figcaption { color: var(--barb-muted); font-size: 12px; padding-top: 12px; }
+.barbearia-flow { background: #e7dece; color: var(--barb-ink); padding-block: 110px; }
+.barbearia-flow .barbearia-eyebrow { color: var(--barb-accent-deep); }
+.barbearia-flow .barbearia-section-intro { color: #6f6457; }
+.barbearia-flow-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 54px; align-items: center; }
+.barbearia-flow-list { display: grid; gap: 14px; }
+.barbearia-flow-list article { border-top: 1px solid oklch(20% .02 70 / .18); padding-top: 18px; display: flex; gap: 18px; }
+.barbearia-flow-list b { font-family: var(--barb-font-display); font-size: 28px; font-weight: 400; }
+.barbearia-flow-list h3 { font-family: var(--barb-font-body); font-size: 17px; margin: 0 0 4px; }
+.barbearia-flow-list p { color: #6f6457; margin: 0; }
+.barbearia-desktop-screen { background: #29241f; color: var(--barb-fg); padding: 18px; box-shadow: 0 24px 70px oklch(0% 0 0 / .24); }
+.barbearia-browser-bar { display: flex; gap: 5px; margin-bottom: 24px; }
+.barbearia-browser-bar i { width: 7px; height: 7px; border-radius: 50%; background: var(--barb-muted); opacity: .5; }
+.barbearia-screen-content { display: grid; grid-template-columns: 115px 1fr; gap: 18px; }
+.barbearia-screen-content aside { border-right: 1px solid var(--barb-border); padding-right: 12px; }
+.barbearia-screen-content aside strong { display: block; margin-bottom: 22px; font-size: 12px; }
+.barbearia-screen-content aside span { display: block; color: var(--barb-muted); font-size: 10px; padding: 8px 0; }
+.barbearia-screen-content aside .active { color: var(--barb-fg); }
+.barbearia-screen-main h3 { font-size: 17px; margin: 0 0 4px; }
+.barbearia-screen-main > p { color: var(--barb-muted); font-size: 10px; margin-bottom: 22px; }
+.barbearia-calendar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 5px; }
+.barbearia-calendar > div { border: 1px solid var(--barb-border); padding: 9px 4px; min-height: 85px; font-size: 9px; }
+.barbearia-calendar em { display: block; color: var(--barb-muted); font-style: normal; margin-bottom: 10px; }
+.barbearia-calendar mark { display: block; background: oklch(78% .16 70 / .24); color: var(--barb-fg); padding: 5px 3px; margin: 4px 0; }
+.barbearia-install { display: grid; grid-template-columns: .9fr 1.1fr; gap: 80px; align-items: center; }
+.barbearia-install-copy h2 { margin-bottom: 24px; }
+.barbearia-install-copy > p:last-of-type { max-width: 43ch; }
+.barbearia-install-card { border: 1px solid var(--barb-border); padding: 28px; background: var(--barb-surface); }
+.barbearia-install-card > div { display: flex; justify-content: space-between; border-bottom: 1px solid var(--barb-border); padding-bottom: 18px; margin-bottom: 18px; }
+.barbearia-install-card > div span { color: oklch(75% .14 145); font-size: 12px; }
+.barbearia-install-card article { display: flex; gap: 14px; margin: 18px 0; align-items: flex-start; }
+.barbearia-install-card article > b { width: 26px; height: 26px; border: 1px solid var(--barb-accent); color: var(--barb-accent); display: grid; place-items: center; font-size: 12px; flex: 0 0 auto; }
+.barbearia-install-card article p { color: var(--barb-muted); font-size: 12px; margin: 0; }
+.barbearia-install-card article strong { display: block; color: var(--barb-fg); font-size: 14px; }
+.barbearia-footer { padding-block: 30px 48px; display: flex; justify-content: space-between; gap: 20px; color: var(--barb-muted); font-size: 12px; }
+.barbearia-footer strong { color: var(--barb-fg); }
+.barbearia-footer a { color: var(--barb-accent); }
+.barbearia-modal-backdrop { position: fixed; inset: 0; background: oklch(0% 0 0 / .72); z-index: 10; display: flex; align-items: center; justify-content: center; padding: 24px; }
+.barbearia-modal { width: min(480px, 100%); background: #f4f0e7; color: var(--barb-ink); padding: 32px; position: relative; }
+.barbearia-modal .barbearia-eyebrow { color: var(--barb-accent-deep); }
+.barbearia-modal h2 { font-size: 52px; margin-bottom: 10px; }
+.barbearia-modal p { color: #6f6457; font-size: 14px; }
+.barbearia-modal label { display: block; font-size: 12px; font-weight: 700; margin: 16px 0 6px; }
+.barbearia-modal input, .barbearia-modal select { width: 100%; height: 44px; border: 1px solid #bcae9c; background: transparent; padding: 0 12px; color: var(--barb-ink); }
+.barbearia-btn-submit { width: 100%; margin-top: 22px; border: 0; background: var(--barb-ink); color: #f4f0e7; }
+.barbearia-close { position: absolute; top: 12px; right: 15px; border: 0; background: transparent; cursor: pointer; font-size: 24px; color: var(--barb-ink); }
+@media (max-width: 850px) {
+  .barbearia-shell { padding-inline: 20px; }
+  .barbearia-nav { display: none; }
+  .barbearia-hero { grid-template-columns: 1fr; gap: 20px; padding-block: 70px 80px; }
+  .barbearia-product-stage { min-height: 540px; transform: scale(.9); transform-origin: left top; margin-bottom: -45px; }
+  .barbearia-section, .barbearia-flow { padding-block: 76px; }
+  .barbearia-section-head, .barbearia-flow-grid, .barbearia-install { display: grid; grid-template-columns: 1fr; gap: 26px; }
+  .barbearia-section-head { align-items: start; margin-bottom: 32px; }
+  .barbearia-pillars { grid-template-columns: 1fr; }
+  .barbearia-pillars article { min-height: auto; }
+  .barbearia-screens-grid { grid-template-columns: repeat(2, 1fr); }
+  .barbearia-footer { display: grid; }
+}
+@media (max-width: 460px) {
+  .barbearia-hero h1 { font-size: 64px; }
+  .barbearia-section h2 { font-size: 52px; }
+  .barbearia-actions { align-items: flex-start; flex-direction: column; gap: 15px; }
+  .barbearia-product-stage { transform: scale(.72); width: 430px; margin-bottom: -120px; }
+  .barbearia-shot-main { right: 8px; }
+  .barbearia-shot-secondary { left: -12px; }
+  .barbearia-screen-content { grid-template-columns: 82px 1fr; }
+}
