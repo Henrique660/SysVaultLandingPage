@@ -19,7 +19,7 @@ export function BarbeariaPage() {
   const [installed, setInstalled] = useState(false);
 
   useEffect(() => {
-    document.title = "Barbearia Original — Produto digital | SysVault SW";
+    document.title = "BARBERSHOP — Produto digital | SysVault SW";
     return () => {
       document.title = "SysVault SW";
     };
@@ -29,8 +29,8 @@ export function BarbeariaPage() {
     <div className="barbearia-page">
       <header className="barbearia-shell barbearia-topbar">
         <a className="barbearia-brand" href="/">
-          <span className="barbearia-brand-mark">BO</span>
-          <span>Barbearia Original</span>
+          <span className="barbearia-brand-mark">BS</span>
+          <span>BARBERSHOP</span>
         </a>
         <nav className="barbearia-nav" aria-label="Navegação do produto">
           <a href="#produto">Produto</a>
@@ -131,7 +131,7 @@ export function BarbeariaPage() {
               <div className="barbearia-desktop-screen">
                 <div className="barbearia-browser-bar"><i /><i /><i /></div>
                 <div className="barbearia-screen-content">
-                  <aside><strong>ORIGINAL</strong><span className="active">Agenda</span><span>Clientes</span><span>Equipe</span><span>Relatórios</span></aside>
+                  <aside><strong>BARBERSHOP</strong><span className="active">Agenda</span><span>Clientes</span><span>Equipe</span><span>Relatórios</span></aside>
                   <div className="barbearia-screen-main">
                     <h3>Agenda da equipe</h3>
                     <p>Organize a operação sem perder o olhar para o atendimento.</p>
@@ -157,7 +157,7 @@ export function BarbeariaPage() {
             </button>
           </div>
           <div className="barbearia-install-card">
-            <div><strong>Barbearia Original</strong><span>● pronto para instalar</span></div>
+            <div><strong>BARBERSHOP</strong><span>● pronto para instalar</span></div>
             <article><b>1</b><p><strong>Abra pelo navegador</strong>O cliente acessa o link da barbearia pelo celular.</p></article>
             <article><b>2</b><p><strong>Adicione à tela inicial</strong>Um toque transforma a experiência em atalho nativo.</p></article>
             <article><b>3</b><p><strong>Volte quando quiser</strong>A agenda e o próximo horário ficam sempre por perto.</p></article>
@@ -166,7 +166,7 @@ export function BarbeariaPage() {
       </main>
 
       <footer className="barbearia-shell barbearia-footer" id="contato">
-        <span><strong>Barbearia Original</strong> · conceito de produto digital</span>
+        <span><strong>BARBERSHOP</strong> · conceito de produto digital</span>
         <span>Estratégia · UX/UI · PWA</span>
         <a href="/">Voltar para SysVault ↗</a>
       </footer>
