@@ -17,6 +17,7 @@ export function BarbeariaPage() {
   const [modalOpen, setModalOpen] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [installed, setInstalled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     document.title = "BARBERSHOP — Produto digital | SysVault SW";
@@ -32,12 +33,40 @@ export function BarbeariaPage() {
           <span className="barbearia-brand-mark">BS</span>
           <span>BARBERSHOP</span>
         </a>
-        <nav className="barbearia-nav" aria-label="Navegação do produto">
-          <a href="#produto">Produto</a>
-          <a href="#telas">Telas</a>
-          <a href="#fluxo">Fluxo</a>
-          <a href="#pwa">PWA mobile</a>
-          <a className="barbearia-nav-cta" href="#contato">Ver projeto ↗</a>
+        <button
+          className={`barbearia-menu-toggle${menuOpen ? " is-open" : ""}`}
+          type="button"
+          aria-label={menuOpen ? "Fechar navegação" : "Abrir navegação"}
+          aria-expanded={menuOpen}
+          aria-controls="barbearia-navigation"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span aria-hidden="true" />
+          <span className="barbearia-sr-only">{menuOpen ? "Fechar navegação" : "Abrir navegação"}</span>
+        </button>
+        <nav
+          className={`barbearia-nav${menuOpen ? " is-open" : ""}`}
+          id="barbearia-navigation"
+          aria-label="Navegação do produto"
+        >
+          {[
+            ["#produto", "Produto"],
+            ["#telas", "Telas"],
+            ["#fluxo", "Fluxo"],
+            ["#pwa", "PWA mobile"],
+            ["#contato", "Ver projeto ↗"],
+          ].map(([href, label], index) => (
+            <a
+              className={index === 4 ? "barbearia-nav-cta" : undefined}
+              href={href}
+              key={href}
+              onClick={() => setMenuOpen(false)}
+            >
+              {label}
+            </a>
+          ))}
         </nav>
       </header>
 
