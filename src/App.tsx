@@ -15,7 +15,9 @@ import "./styles/utils.css";
 export default function App() {
   useReveal();
 
-  if (window.location.pathname === "/barbearia") {
+  const pathname = window.location.pathname.replace(/\/+$/, "") || "/";
+
+  if (pathname === "/barbearia") {
     return <BarbeariaPage />;
   }
 

@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/barbearia",
+      "destination": "/"
+    },
+    {
+      "source": "/barbearia/",
+      "destination": "/"
+    }
+  ]
+}
